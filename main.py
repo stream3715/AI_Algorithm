@@ -22,6 +22,8 @@ def render_result(maze, solved_maze, start, end):
         buf[obj[0]][obj[1]] = '.'
 
     for obj in solved_maze[0]:
+        if obj == start:
+            continue
         buf[obj[0]][obj[1]] = '*'
         cnt += 1
 
@@ -48,7 +50,7 @@ def mode_selector(mode, maze, start, end):
 
 
 def search_main():
-    """
+
     maze = [
         'OOOOOOOOOOOOOO',
         'O     G      O',
@@ -81,6 +83,7 @@ def search_main():
         'O  O   OO           O  OOOOO  O   O O',
         'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO',
     ]
+    """
 
     start = find_ch("S", maze)
     end = find_ch("G", maze)
@@ -89,7 +92,7 @@ def search_main():
     render_result(maze, mode_selector(0, maze, start, end), start, end)
     time_finish_astar = time.perf_counter()
     print("Searched in " + str(time_finish_astar - time_start_astar) + "\n")
-    """
+
     time_start_greedy = time.perf_counter()
     render_result(maze, mode_selector(1, maze, start, end), start, end)
     time_finish_greedy = time.perf_counter()
@@ -99,13 +102,12 @@ def search_main():
     render_result(maze, mode_selector(2, maze, start, end), start, end)
     time_finish_bfs = time.perf_counter()
     print("Searched in " + str(time_finish_bfs - time_start_bfs) + "\n")
-    
 
     time_start_dfs = time.perf_counter()
     render_result(maze, mode_selector(3, maze, start, end), start, end)
     time_finish_dfs = time.perf_counter()
     print("Searched in " + str(time_finish_dfs - time_start_dfs) + "\n")
-    """
+
     time_start_dls = time.perf_counter()
     render_result(maze, mode_selector(4, maze, start, end), start, end)
     time_finish_dls = time.perf_counter()

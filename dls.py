@@ -3,11 +3,9 @@ from myfunc import get_next_positions
 
 def search_dls(maze, start, end):
     count = 1
-    print(count)
     result = dls_bootstrap(maze, start, end, count)
     while not result:
         count += 1
-        print(count)
         result = dls_bootstrap(maze, start, end, count)
 
     return result
