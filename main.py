@@ -68,23 +68,22 @@ def search_main():
     ]
 
     """
-    maze = [
+     maze = [
         'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO',
-        'O   O           OO OO    O O        O',
-        'O O SOOOOOO  OO  O O  O  O O        O',
-        'O  OOO   O O OOO O    O  O O  OOOGO O',
+        'O   O           OO OO    O O OO     O',
+        'O O SOOOOOO  OO  O O  O  O O    O O O',
+        'O  OOO   O O OOO O    O  O OO OOOGO O',
         'OO  O  O   O  O  O  O  O   O      OOO',
-        'O O   OO O     O O  OO   O  O       O',
-        'O  O     OOOOOOO O  OO  OO  OOO     O',
-        'O     O  O   O   O  OO O   OOOOOO   O',
+        'O O   OO O     O O  OO   O  O O O   O',
+        'O  O     OOOOOOO O  OO  OO  OOO  O  O',
+        'O    OO  O   O   O  OO O   OOOOOOOO O',
         'OOO OO   OOOOOOO O  O  O         O  O',
-        'O    OOOOOO      O  O  OOO O OO O O O',
-        'O O O OOOOO OOOOOO  O         O O   O',
-        'O  O   OO           O  OOOOO  O   O O',
+        'O   OOOO OO      O  O  OOO O OO O O O',
+        'O O  OOO OO OOOOOO  O         O O   O',
+        'O  O                O  OOOOO  O   O O',
         'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO',
     ]
     """
-
     start = find_ch("S", maze)
     end = find_ch("G", maze)
 
