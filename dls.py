@@ -5,6 +5,7 @@ def search_dls(maze, start, end):
     count = 0
     result = []
     while not result:
+        print(count)
         result = dls_bootstrap(maze, start, end, count)
         count += 1
     return result

@@ -1,4 +1,3 @@
-# coding: utf-8
 import time
 
 from astar import search_astar
@@ -53,7 +52,7 @@ def search_main():
 
     maze = [
         'OOOOOOOOOOOOOO',
-        'O     G      O',
+        'O           GO',
         'O            O',
         'O   OOOOO    O',
         'O            O',
@@ -62,13 +61,13 @@ def search_main():
         'O            O',
         'O            O',
         'O            O',
-        'O     S      O',
+        'OS           O',
         'O            O',
         'OOOOOOOOOOOOOO',
     ]
 
     """
-     maze = [
+    maze = [
         'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO',
         'O   O           OO OO    O O OO     O',
         'O O SOOOOOO  OO  O O  O  O O    O O O',
@@ -84,6 +83,7 @@ def search_main():
         'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO',
     ]
     """
+
     start = find_ch("S", maze)
     end = find_ch("G", maze)
 
