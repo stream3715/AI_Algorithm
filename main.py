@@ -31,7 +31,7 @@ def render_result(maze, solved_maze, start, end):
     buf[end[0]][end[1]] = "G"
 
     print("\n".join("".join(l) for l in buf))
-    print(f"finish in {cnt} step(s).")
+    print(f"finished in {cnt} step(s).")
 
 
 def mode_selector(mode, maze, start, end):

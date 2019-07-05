@@ -16,7 +16,7 @@ def dls_bootstrap(maze, start, end, limit):
     if not dls_recursive(maze, start, end, checked, limit):
         return []
 
-    parent_y, parent_x = end[0], end[1]
+    (parent_y, parent_x) = end
     while not (parent_y, parent_x) == start:
         solved_maze[0].append((parent_y, parent_x))
         (parent_y, parent_x) = solved_maze[1][parent_y, parent_x][1]
@@ -27,9 +27,9 @@ def dls_recursive(maze, pos, end, checked, limit):
     cnt = checked[pos[0], pos[1]][0]
 
     if cnt < limit:
+        cnt += 1
         for next_pos in get_next_positions(pos, maze):
             (y, x) = next_pos
-            cnt += 1
             """ IS_GOAL?"""
             if next_pos == end:
                 checked[end[0], end[1]] = [cnt, pos]
